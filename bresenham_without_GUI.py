@@ -8,13 +8,13 @@ class Line:
 
     def bresenham(self):
         e = self.m - 0.5  # aux variable / error from the mid point
-        xaux, yaux = self.xa, self.ya
+        x_aux, y_aux = self.xa, self.ya
         x_pixels = []
         y_pixels = []
 
-        while (xaux < self.xb) and (yaux < self.yb):
-            x_pixels.append(xaux)
-            y_pixels.append(yaux)
+        while (x_aux < self.xb) and (y_aux < self.yb):
+            x_pixels.append(x_aux)
+            y_pixels.append(y_aux)
             xaux += 1
             if e > 0:
                 e -= 1
@@ -22,9 +22,9 @@ class Line:
 
             e += self.m
 
-        x_pixels.append(xaux)
-        y_pixels.append(yaux)
-        return (x_pixels, y_pixels)
+        x_pixels.append(x_aux)
+        y_pixels.append(y_aux)
+        return x_pixels, y_pixels
 
 
 def main():
