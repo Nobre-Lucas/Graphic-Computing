@@ -2,9 +2,12 @@ def bresenham(xa=0, ya=0, xb=6, yb=6):
     m = (yb - ya) / (xb - xa) # linear coefficient of a function
     e = m - 0.5 # aux variable
     xaux, yaux = xa, ya
+    x_pixels = []
+    y_pixels = []
 
     while (xaux < xb) and (yaux < yb):
-        print(xaux, yaux)
+        x_pixels.append(xaux)
+        y_pixels.append(yaux)
         xaux += 1
         if e > 0:
             e -= 1
@@ -12,7 +15,9 @@ def bresenham(xa=0, ya=0, xb=6, yb=6):
 
         e += m
 
-    print(xaux, yaux)
+    x_pixels.append(xaux)
+    y_pixels.append(yaux)
+    return (x_pixels, y_pixels)
 
 
 def main():
@@ -21,7 +26,8 @@ def main():
     x1, y1 = int(xy[0]), int(xy[1])
     xy = input("Valores de x2 e y2: ").split()
     x2, y2 = int(xy[0]), int(xy[1])
-    bresenham(x1, y1, x2, y2)
+    x_pixels, y_pixels = bresenham(x1, y1, x2, y2)
+    print(f"{x_pixels}\n{y_pixels}")
 
     return 0
 
