@@ -15,10 +15,10 @@ class Line:
         while (x_aux < self.xb) and (y_aux < self.yb):
             x_pixels.append(x_aux)
             y_pixels.append(y_aux)
-            xaux += 1
+            x_aux += 1
             if e > 0:
                 e -= 1
-                yaux += 1
+                y_aux += 1
 
             e += self.m
 
