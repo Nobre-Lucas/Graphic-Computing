@@ -34,16 +34,3 @@ def ConverterCoordenadas(x, y):  # converter coordenadas para o sistema de grade
 def DesenharPixel(x, y, cor):  # desenha um pixel na grade
     x1, y1 = ConverterCoordenadas(x, y)
     tela.create_rectangle(x1, y1, x1 + tamanhoPixel, y1 - tamanhoPixel, fill=cor)
-
-
-# DesenharPixel(0, 0, '#f00')
-# DesenharPixel(1, 1, '#f00')
-# DesenharPixel(2, 1, '#f00')
-# DesenharPixel(3, 2, '#f00')
-# DesenharPixel(4, 2, '#f00')
-# DesenharPixel(5, 3, '#f00')
-
-
-CriarTemplate()
-
-tkinter.mainloop()
