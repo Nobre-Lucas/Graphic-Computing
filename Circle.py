@@ -37,7 +37,6 @@ def main():
     raio = int(input("Defina o valor do raio:"))
     entrada_central = str(input("Defina as coordenadas do centro do círculo:")).split()
     x_central, y_central = int(entrada_central[0]), int(entrada_central[1])
-    print(x_central, y_central)
     circle = Circle(raio, x_central, y_central)
     circle.circle()
     dg.CriarTemplate()

@@ -55,7 +55,6 @@ def main():
     raio_vertical = int(input("Defina o valor do raio vertical:"))
     entrada_central = str(input("Defina as coordenadas do centro do círculo:")).split()
     x_central, y_central = int(entrada_central[0]), int(entrada_central[1])
-    print(x_central, y_central)
     ellipse = Ellipse(raio_horizontal, raio_vertical, x_central, y_central)
     ellipse.ellipse()
     dg.CriarTemplate()
